@@ -1,0 +1,472 @@
+:root {
+    font-size: 13px;
+}
+
+html {
+    font-family: "Raleway", sans-serif;
+}
+h1 {
+    font-size: 1.85rem;
+}
+h2 {
+    font-size: 1.55rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+button,
+a {
+    font-size: 1.2rem;
+}
+
+.blue {
+    color: #0065fc;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "form"
+        "populaires"
+        "hosting"
+        "loisirs"
+        "footer";
+    grid-gap: 20px;
+}
+
+/***********************************************************
+*                           HEADER DU SITE
+***************************************************/
+.logo {
+    position: absolute;
+}
+
+.header {
+    grid-area: header;
+}
+.header > nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    grid-template-areas:
+        ". nav-register"
+        "nav-hosting nav-loisirs";
+    font-size: 15px;
+}
+.logo-reservia {
+    height: 40px;
+    left: 15px;
+    top: 10px;
+    position: absolute;
+    width: auto;
+}
+.register {
+    grid-area: nav-register;
+    text-align: end;
+    color: #0065fc;
+    line-height: 50px;
+    padding-right: 20px;
+}
+.host {
+    grid-area: nav-hosting;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: 2px solid #0065fc;
+    color: #0065fc;
+}
+.activ {
+    grid-area: nav-loisirs;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+    border-bottom: 2px solid #f2f2f2;
+}
+/*FORMULAIRE DU SITE-------------------------------------*/
+form {
+    grid-area: form;
+    padding: 0 20px;
+}
+form > h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+form > h2 {
+    margin-bottom: 10px;
+}
+form > p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.search-bar {
+    display: flex;
+    margin-bottom: 10px;
+
+    border-radius: 15px;
+}
+
+input {
+    width: calc(100%-70px);
+    border: none;
+    padding: 0 20px;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+}
+button > span {
+    padding: 0 10px;
+    font-weight: bolder;
+}
+button > i {
+    border-radius: 100%;
+}
+form > button {
+    margin: 0 5px 5px 0;
+    border: 2px solid silver;
+    border-radius: 20px;
+    font-size: 1.3em;
+    height: 40px;
+    background-color: white;
+}
+
+form > button > i {
+    height: 40px;
+    width: 40px;
+    line-height: 40px !important;
+    color: #0065fc;
+    margin: -2px;
+    background-color: #deebff;
+    font-size: 20px;
+}
+.info > i {
+    border-radius: 100%;
+    color: #0065fc;
+
+    border: 2px solid silver;
+    width: 25px;
+    height: 25px;
+    line-height: 25px !important;
+    text-align: center;
+}
+.info {
+    display: flex;
+    margin: 10px 0;
+}
+.info > p {
+    margin-left: 10px;
+    font-size: 15px;
+    width: 80%;
+}
+/* P  O  P  U  L  A  I  R  E  S*/
+.populaires {
+    grid-area: populaires;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 120px 120px 120px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    row-gap: 20px;
+}
+
+.populaires > header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 23px;
+}
+
+.populaires > article {
+    background-color: white;
+    border-radius: 20px;
+    height: 100%;
+    box-shadow: 0 0 16px #0000002e;
+}
+
+.container-popular {
+    display: flex;
+    height: 100%;
+}
+.container-popular > img {
+    width: 40%;
+    border-radius: 20px 0 0 20px;
+    padding: 2px;
+    object-fit: cover;
+}
+.container-popular > figcaption {
+    width: 60%;
+    color: black;
+    padding: 10px;
+    position: relative;
+}
+/* HEBERGEMENTS*/
+#hosting {
+    grid-template-columns: 2fr;
+    grid-template-rows: auto repeat(6, 240px) auto;
+    grid-area: hosting;
+    display: grid;
+    padding: 20px;
+    grid-gap: 10px;
+    color: black;
+    background-color: transparent;
+}
+#hosting > header {
+    grid-column: 1/-1;
+    padding: 0px 20px;
+}
+#hosting > article {
+    height: 100%;
+    padding: 5px;
+    box-shadow: 0 5px 10px silver;
+    border-radius: 20px;
+}
+.container-hosting {
+    height: 100%;
+    padding-bottom: 20;
+}
+.icones2 {
+    padding-bottom: 10px;
+}
+
+.container-hosting > img {
+    height: 60%;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+.container-hosting > figcaption {
+    width: 100%;
+    height: 40%;
+    color: black;
+    padding-left: 5px;
+}
+
+.icone-map {
+    background-color: #f2f2f2;
+
+    width: 40px;
+    border-radius: 15px 0 0 15px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px !important;
+}
+
+.couleur-recherche {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    line-height: 40px;
+    margin-left: -10px;
+    border: none;
+}
+
+.afficherplus {
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+/*ACTIVITES*/
+
+#loisirs {
+    grid-area: loisirs;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(6, 150px);
+
+    padding: 20px;
+    row-gap: 60px;
+}
+.container-loisirs {
+    background-color: white;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    color: black;
+    box-shadow: 0 5px 10px 0px silver;
+}
+.container-loisirs > img {
+    width: 100%;
+    height: calc(100% - 55px);
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.container-loisirs > figcaption {
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px;
+}
+
+.container-loisirs > article {
+    background-color: white;
+    border-radius: 1.25rem;
+
+    height: 100%;
+}
+/*FOOTER*/
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 20px auto 20px auto 20px;
+    background-color: #f2f2f2;
+    row-gap: 10px;
+    padding: 20px;
+}
+.footer-title {
+    padding-top: 10px;
+}
+footer,
+a {
+    color: black;
+}
+footer nav {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.grey {
+    color: grey;
+    font-size: 12px;
+}
+.blue {
+    color: #0065fc;
+    font-size: 12px;
+}
+.icones {
+    padding-top: 20px;
+    position: absolute;
+    bottom: 10px;
+}
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 100px auto 60px auto 60px;
+}
+footer > h3 {
+    font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+    body {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "header header"
+            "form form"
+            "hosting populaires"
+            "loisirs loisirs"
+            "footer footer";
+    }
+    .populaires {
+        grid-area: populaires;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 140px 140px 140px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        row-gap: 20px;
+        border-radius: 20px;
+        margin: 15px;
+    }
+    #hosting {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto 200px 200px;
+
+        padding: 20px;
+        grid-gap: 30px;
+        color: black;
+        background-color: #f2f2f2;
+        border-radius: 20px;
+        margin-left: 20px;
+    }
+
+    .header > nav {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 600px;
+    }
+    .host {
+        border-top: 2px solid #0065fc;
+        border-bottom: none;
+    }
+    .activ {
+        border-top: 2px solid #f2f2f2;
+        border-bottom: none;
+    }
+    #loisirs {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+        column-gap: 2rem;
+        margin: 4rem 0;
+    }
+    .head {
+        grid-column: 1/-1;
+    }
+    .loisir1 {
+        grid-column: 1/2;
+        grid-row: 2/7;
+    }
+    .loisir2 {
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+    .loisir3 {
+        grid-column: 2/3;
+        grid-row: 4/-1;
+    }
+    .loisir4 {
+        grid-column: 3/4;
+        grid-row: 2/-1;
+    }
+    .loisir5 {
+        grid-column: 4/5;
+        grid-row: 2/4;
+    }
+    .loisir6 {
+        grid-column: 4/5;
+        grid-row: 4/-1;
+    }
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto repeat(2, 50px);
+        row-gap: 20px;
+    }
+    .footerTitre {
+        grid-row: 1/2;
+        padding-bottom: 10px;
+    }
+    .line-foot {
+        padding-bottom: 10px;
+    }
+
+    .foot1 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .foot2 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+}
+@media (max-width: 768px) {
+    .couleur-recherche > span {
+        display: none;
+    }
+}
